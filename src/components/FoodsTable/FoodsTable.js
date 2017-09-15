@@ -1,10 +1,12 @@
 import React from 'react';
 import { Table } from 'antd';
-import foods from '../data/foods.json';
+import foods from '../../data/foods.json';
+import './FoodsTable.css';
 
 const columns = [{
   title: 'Name',
   dataIndex: 'title',
+  width: 320,
 }, {
   title: 'Amount',
   dataIndex: 'amount',
@@ -25,8 +27,11 @@ const columns = [{
 function FoodsTable () {
   return (
     <Table
+      className="foods-table"
       columns={columns}
       dataSource={foods}
+      bordered={true}
+      size={'medium'}
     />
   )
 }
