@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import FoodsTable from './components/Table';
+import FoodsTable from './components/FoodsTable';
 
 class App extends Component {
   render() {
