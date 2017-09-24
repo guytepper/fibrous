@@ -10,6 +10,10 @@ body {
   margin: 0 auto;
 }
 
+.App-details {
+  margin: 10px 0 20px;
+}
+
 .table-container {
   max-width: 90vw;
   margin: 0 auto;
