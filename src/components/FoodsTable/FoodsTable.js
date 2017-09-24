@@ -44,7 +44,8 @@ class FoodsTable extends Component {
     const columns = [{
       title: 'Name',
       dataIndex: 'title',
-      width: 320,
+      width: 220,
+      fixed: 'left',
       filterDropdown: (
         <div className="custom-filter-dropdown">
           <Input
@@ -67,13 +68,17 @@ class FoodsTable extends Component {
     }, {
       title: 'Amount',
       dataIndex: 'amount',
+      className: 'amount-column',
+      width: 100,
     }, {
       title: 'Soluble',
       dataIndex: 'soluble',
+      width: 75,
       sorter: (a, b) => a.soluble - b.soluble
     }, {
       title: 'Insoluble',
       dataIndex: 'insoluble',
+      width: 75,
       sorter: (a, b) => a.insoluble - b.insoluble
     }, {
       title: 'Total',
@@ -87,6 +92,7 @@ class FoodsTable extends Component {
         columns={columns}
         dataSource={this.state.data}
         bordered={true}
+        scroll={{ x: 600 }}
         size={'medium'}
       />
     )
