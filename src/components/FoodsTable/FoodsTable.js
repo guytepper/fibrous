@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Table, Input, Button, Icon } from 'antd';
 import data from '../../data/foods.json';
 import './FoodsTable.css';
-  
+
 class FoodsTable extends Component {
   state = {
     filterDropdownVisible: false,
@@ -22,7 +22,7 @@ class FoodsTable extends Component {
       filterDropdownVisible: false,
       filtered: !!searchText,
       data: data.map(record => {
-        const match = record.title.match(reg);      
+        const match = record.title.match(reg);
         if (!match) {
           return null;
         }
@@ -39,7 +39,7 @@ class FoodsTable extends Component {
       }).filter(record => !!record),
     });
   }
-    
+
   render() {
     const columns = [{
       title: 'Name',
