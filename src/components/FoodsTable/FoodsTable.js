@@ -73,12 +73,12 @@ class FoodsTable extends Component {
     }, {
       title: 'Soluble',
       dataIndex: 'soluble',
-      width: 75,
+      width: 90,
       sorter: (a, b) => a.soluble - b.soluble
     }, {
       title: 'Insoluble',
       dataIndex: 'insoluble',
-      width: 75,
+      width: 90,
       sorter: (a, b) => a.insoluble - b.insoluble
     }, {
       title: 'Total',
