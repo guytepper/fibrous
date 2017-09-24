@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Table, Input, Button, Icon } from 'antd';
 import data from '../../data/foods.json';
 import './FoodsTable.css';
-  
+
 class FoodsTable extends Component {
   state = {
     filterDropdownVisible: false,
@@ -22,7 +22,7 @@ class FoodsTable extends Component {
       filterDropdownVisible: false,
       filtered: !!searchText,
       data: data.map(record => {
-        const match = record.title.match(reg);      
+        const match = record.title.match(reg);
         if (!match) {
           return null;
         }
@@ -39,12 +39,13 @@ class FoodsTable extends Component {
       }).filter(record => !!record),
     });
   }
-    
+
   render() {
     const columns = [{
       title: 'Name',
       dataIndex: 'title',
-      width: 320,
+      width: 220,
+      fixed: 'left',
       filterDropdown: (
         <div className="custom-filter-dropdown">
           <Input
@@ -67,13 +68,17 @@ class FoodsTable extends Component {
     }, {
       title: 'Amount',
       dataIndex: 'amount',
+      className: 'amount-column',
+      width: 100,
     }, {
       title: 'Soluble',
       dataIndex: 'soluble',
+      width: 90,
       sorter: (a, b) => a.soluble - b.soluble
     }, {
       title: 'Insoluble',
       dataIndex: 'insoluble',
+      width: 90,
       sorter: (a, b) => a.insoluble - b.insoluble
     }, {
       title: 'Total',
@@ -87,6 +92,7 @@ class FoodsTable extends Component {
         columns={columns}
         dataSource={this.state.data}
         bordered={true}
+        scroll={{ x: 620 }}
         size={'medium'}
       />
     )

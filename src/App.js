@@ -9,7 +9,7 @@ class App extends Component {
         <h1>Fibrous</h1>
         <h2>Easily check for insoluble / soluble fiber content in foods</h2>
         <div className="table-container">
-          <FoodsTable className="test" />
+          <FoodsTable />
         </div>        
       </div>
     );
