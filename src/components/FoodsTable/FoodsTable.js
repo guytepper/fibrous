@@ -92,7 +92,7 @@ class FoodsTable extends Component {
         columns={columns}
         dataSource={this.state.data}
         bordered={true}
-        scroll={{ x: 600 }}
+        scroll={{ x: 620 }}
         size={'medium'}
       />
     )
