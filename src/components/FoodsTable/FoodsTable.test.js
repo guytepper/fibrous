@@ -20,3 +20,16 @@ it('renders first row correctly', () => {
   expect(foodInsol).toEqual(firstFood.insoluble);
   expect(foodTotal).toEqual(firstFood.total);
 });
+
+it('searches successfuly', () => {
+  const wrapper = mount(<FoodsTable />);
+
+  wrapper.find('.anticon-search').first().simulate('click');
+// console.log(wrapper.state().filterDropdownVisible);
+  console.log(wrapper.find('.custom-filter-dropdown').first());
+
+  // const input = wrapper.find('.custom-filter-dropdown input').first();
+  // const focusedElement = document.activeElement;
+
+  expect(input.matchesElement(focusedElement)).to.equal(true, 'The element was not focused');
+});
