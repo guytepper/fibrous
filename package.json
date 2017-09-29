@@ -5,10 +5,13 @@
   "homepage": "https://guytepper.github.io/fibrous",
   "dependencies": {
     "antd": "^2.13.1",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-15": "^1.0.0",
     "gh-pages": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.13"
+    "react-scripts": "1.0.13",
+    "react-test-renderer": "15.6.1"
   },
   "scripts": {
     "predeploy": "npm run build",
