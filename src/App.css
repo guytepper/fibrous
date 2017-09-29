@@ -24,3 +24,7 @@ body {
     max-width: 620px;
   }
 }
+
+.App-footer {
+  margin: 25px 0;
+}
